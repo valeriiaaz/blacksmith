@@ -1,3 +1,7 @@
+<?php
+require_once 'settings.php';
+require_once 'blacksmith.php';
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,9 +14,9 @@
 <body>
   <h1>Blacksmith</h1>
   <div id="response" class="response">
-  <?php if (isset($_SESSION['blacksmith']['response'])): ?>
+  <?php if (isset($_SESSION['blacksmith']['response'])) : ?>
       <?php echo getResponse(); ?>
-    <?php else: ?> 
+    <?php else : ?> 
       <?php echo updateResponse(help()); ?>
     <?php endif; ?>
   </div>
